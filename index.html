@@ -1,35 +1,296 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/tabnav.js"></script>
+    <script src="scripts/hero.js"></script>
   </head>
   <body>
-  <section class="section">
-    <div class="container">
-      <h1 class="title">
-        Caminhawards
-      </h1>
-      <p class="subtitle">
-        Blanqueando el alcoholismo con logritos
-      </p>
-    </div>
-  </section>
-  <section>
-    <div class="container">
-      <div class="block is-size-4">
-        ¡Una detrás de otra!
+    <section class="hero is-small is-warning">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1 class="title">Artbeerd</h1>
+          <p id="heroSubtitle" class="subtitle"></p>
+        </div>
       </div>
-      <div class="box">
-        Simplemente bebéte todas las cervezas que puedas (1/5)
+
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth is-large">
+          <div class="container">
+            <ul>
+              <li class="tab is-active" onclick="openTab(event,'beerTab')">
+                <a>Beer</a>
+              </li>
+              <li class="tab" onclick="openTab(event,'socialTab')">
+                <a>Social</a>
+              </li>
+              <li class="tab" onclick="openTab(event,'miscTab')">
+                <a>Misc</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-      <button class="block is-success button">Check-in</button>
-      <progress class="progress is-warning" value="25" max="100">
-        75%
-      </progress>
+    </section>
+
+    <div id="beerTab" class="container section content-tab">
+      <div class="my-6">
+        <div class="block is-size-4">KEEP 'EM COMING!</div>
+        <div class="box">Simply keep on checking beers (1/5)</div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">AS WIDE AS THE RAINBOW</div>
+              <div class="box">
+                There's life beyond lagers! Check for every WHITE (witbier),
+                BLACK (porter, stout...), RED (Irish red ale) and BROWN (Belgian
+                dubbel, barleywine...) beer combo!
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="block is-warning button">White</button>
+        <button class="block is-warning button">Black</button>
+        <button class="block is-warning button">Red</button>
+        <button class="block is-warning button">Brown</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">AS WIDE AS THE RAINBOW</div>
+        <div class="box">
+          There's life beyond lagers! Check for every WHITE (witbier), BLACK
+          (porter, stout...), RED (Irish red ale) and BROWN (Belgian dubbel,
+          barleywine...) beer combo!
+        </div>
+        <button class="block is-warning button">White</button>
+        <button class="block is-warning button">Black</button>
+        <button class="block is-warning button">Red</button>
+        <button class="block is-warning button">Brown</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">SECOND CHANCES ARE FOR EVERYONE, HUH?</div>
+        <div class="box">
+          So you REALLY liked it, didn't you? Check-in for every beer you have
+          already checked before (only during Artbeer!)
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">POLE!</div>
+        <div class="box">
+          Came first... to check-in, that is! Be the first checking-in a beer in
+          Untappd.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">KING FOR A DAY</div>
+        <div class="box">
+          Perfection comes around. Rate the beer with 5 STARS in Untappd.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">KNIGHT IN SHINING PINTGLASS</div>
+        <div class="box">
+          A case of potential greatness. Rate the beer with 4.5 STARS in
+          Untappd.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">JACK OF SOME TRADES</div>
+        <div class="box">
+          There's beauty in the flaws. Rate the beer with 4 STARS in Untappd.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">PISSBIER</div>
+        <div class="box">
+          Son, I am dissapoint. Rate the beer with less than 2 STARS in Untappd.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">TOP 5</div>
+        <div class="box">
+          Celebrate diversity! Check-in 5 different beers from 5 different
+          breweries/venues.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">BURNING IN YOUR POCKET</div>
+        <div class="box">
+          It'd better taste like the thighs of a Greek goddess! Spend 10€ or
+          more in a single beer.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">LAST ONE OF THE DAY</div>
+        <div class="box">
+          Bravo, we're going dark. Drink a beer with 15% (or more) ABV.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">DOUBLE DATE</div>
+        <div class="box">
+          ...Double the fun? Order 2 beers for yourself at the same time.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">FULL CIRCLE</div>
+        <div class="box">
+          The wages of exploration are countless! Order at least 1 beer of each
+          brewery.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
     </div>
-  </section>
+
+    <div id="socialTab" class="container section content-tab">
+      <div class="my-6">
+        <div class="block is-size-4">OBJECTION!</div>
+        <div class="box">
+          Agree to disagree? Rate a beer with at least 1.5 stars of difference
+          in Untappd.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">SMILE FOR THE CAMERA!</div>
+        <div class="box">
+          Cheese! Get someone distracted in a check-in photo.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">SOCIAL BUTTERFLY</div>
+        <div class="box">
+          The sign that beer wins over language barriers. Make 2 or more new
+          friends in Untappd.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">ROCKSTAR</div>
+        <div class="box">
+          Such a diva, aren't you? Arrive later than expected to the event
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">POPSTAR</div>
+        <div class="box">
+          Yep, that clicked in my head, somehow. You feel the urge of singing!
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">REFUGEES WELCOME</div>
+        <div class="box">
+          Nobody should be lonely! Adopt (or be adopted by) someone who lost
+          their friend group
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+    </div>
+
+    <div id="miscTab" class="container section content-tab">
+      <div class="my-6">
+        <div class="block is-size-4">READY, SET, FAIL!</div>
+        <div class="box">
+          Oopsie! Forget to make a check-in (this applies only to the last
+          unchecked beer)
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">OH NO</div>
+        <div class="box">
+          I wouldn't want to achieve this, but you do you. Throw up during
+          Artbeer Festival.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">AS GOOD AS NEW</div>
+        <div class="box">
+          HP/MP restored! You drank enough water and you woke up feeling
+          refreshed.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+
+      <div class="my-6">
+        <div class="block is-size-4">BOXES</div>
+        <div class="box">
+          After a busy morning drinking, go home to take a nap and then continue
+          drinking in the evening.
+        </div>
+        <button class="block is-warning button">Check-in</button>
+        <progress class="progress" value="25" max="100">75%</progress>
+      </div>
+    </div>
   </body>
 </html>

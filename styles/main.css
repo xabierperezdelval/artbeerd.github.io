@@ -1,2 +1,9 @@
 @import "../node_modules/bulma/css/bulma.css";
 
+#socialTab, #miscTab {
+  display: none;
+}
+
+.media-v-center {
+    align-items: center;
+}
