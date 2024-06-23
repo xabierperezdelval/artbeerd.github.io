@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/tabnav.js"></script>
     <script src="scripts/hero.js"></script>
+    <script src="scripts/beer-achievements.js"></script>
+    <script src="scripts/social-achievements.js"></script>
+    <script src="scripts/misc-achievements.js"></script>
   </head>
   <body>
-    <section class="hero is-small is-warning">
+    <section class="hero is-warning">
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title">Artbeerd</h1>
@@ -38,10 +41,24 @@
 
     <div id="beerTab" class="container section content-tab">
       <div class="my-6">
-        <div class="block is-size-4">KEEP 'EM COMING!</div>
-        <div class="box">Simply keep on checking beers (1/5)</div>
-        <button class="block is-warning button">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">KEEP 'EM COMING!</div>
+              <div class="box">Simply keep on checking beers</div>
+            </div>
+          </div>
+        </div>
+        <progress id="beerAchv1Progress" class="progress" value="0" max="5">0%</progress>
+        <button id="beerAchv1Button" onclick="addAchievement1Value(event, this)" class="block is-warning button is-medium">Check-in</button>
       </div>
 
       <div class="my-6">
@@ -59,236 +76,522 @@
               <div class="block is-size-4">AS WIDE AS THE RAINBOW</div>
               <div class="box">
                 There's life beyond lagers! Check for every WHITE (witbier),
-                BLACK (porter, stout...), RED (Irish red ale) and BROWN (Belgian
-                dubbel, barleywine...) beer combo!
+                BLACK (porter, stout...), RED (Irish red ale) and BROWN
+                (Belgian, barleywine...) combo!
               </div>
             </div>
           </div>
         </div>
-        <button class="block is-warning button">White</button>
-        <button class="block is-warning button">Black</button>
-        <button class="block is-warning button">Red</button>
-        <button class="block is-warning button">Brown</button>
+        <button class="block is-warning button is-medium">White</button>
+        <button class="block is-warning button is-medium">Black</button>
+        <button class="block is-warning button is-medium">Red</button>
+        <button class="block is-warning button is-medium">Brown</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">AS WIDE AS THE RAINBOW</div>
-        <div class="box">
-          There's life beyond lagers! Check for every WHITE (witbier), BLACK
-          (porter, stout...), RED (Irish red ale) and BROWN (Belgian dubbel,
-          barleywine...) beer combo!
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">
+                SECOND CHANCES ARE FOR EVERYONE, HUH?
+              </div>
+              <div class="box">
+                So you REALLY liked it, didn't you? Check-in for every beer you
+                have already checked before (only during Artbeer!)
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">White</button>
-        <button class="block is-warning button">Black</button>
-        <button class="block is-warning button">Red</button>
-        <button class="block is-warning button">Brown</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">SECOND CHANCES ARE FOR EVERYONE, HUH?</div>
-        <div class="box">
-          So you REALLY liked it, didn't you? Check-in for every beer you have
-          already checked before (only during Artbeer!)
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">POLE!</div>
+              <div class="box">
+                Came first... to check-in, that is! Be the first checking-in a
+                beer in Untappd.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">POLE!</div>
-        <div class="box">
-          Came first... to check-in, that is! Be the first checking-in a beer in
-          Untappd.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">KING FOR A DAY</div>
+              <div class="box">
+                Perfection comes around. Rate the beer with 5 STARS in Untappd.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">KING FOR A DAY</div>
-        <div class="box">
-          Perfection comes around. Rate the beer with 5 STARS in Untappd.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">KNIGHT IN SHINING PINTGLASS</div>
+              <div class="box">
+                A case of potential greatness. Rate the beer with 4.5 STARS in
+                Untappd.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">KNIGHT IN SHINING PINTGLASS</div>
-        <div class="box">
-          A case of potential greatness. Rate the beer with 4.5 STARS in
-          Untappd.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">JACK OF SOME TRADES</div>
+              <div class="box">
+                There's beauty in the flaws. Rate the beer with 4 STARS in
+                Untappd.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">JACK OF SOME TRADES</div>
-        <div class="box">
-          There's beauty in the flaws. Rate the beer with 4 STARS in Untappd.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">PISSBIER</div>
+              <div class="box">
+                Son, I am dissapoint. Rate the beer with less than 2 STARS in
+                Untappd.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">PISSBIER</div>
-        <div class="box">
-          Son, I am dissapoint. Rate the beer with less than 2 STARS in Untappd.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">TOP 5</div>
+              <div class="box">
+                Celebrate diversity! Check-in 5 different beers from 5 different
+                breweries/venues.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">TOP 5</div>
-        <div class="box">
-          Celebrate diversity! Check-in 5 different beers from 5 different
-          breweries/venues.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">BURNING IN YOUR POCKET</div>
+              <div class="box">
+                It'd better taste like the thighs of a Greek goddess! Spend 10€
+                or more in a single beer.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">BURNING IN YOUR POCKET</div>
-        <div class="box">
-          It'd better taste like the thighs of a Greek goddess! Spend 10€ or
-          more in a single beer.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">LAST ONE OF THE DAY</div>
+              <div class="box">
+                Bravo, we're going dark. Drink a beer with 15% (or more) ABV.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">LAST ONE OF THE DAY</div>
-        <div class="box">
-          Bravo, we're going dark. Drink a beer with 15% (or more) ABV.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">DOUBLE DATE</div>
+              <div class="box">
+                ...Double the fun? Order 2 beers for yourself at the same time.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">DOUBLE DATE</div>
-        <div class="box">
-          ...Double the fun? Order 2 beers for yourself at the same time.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">FULL CIRCLE</div>
+              <div class="box">
+                The wages of exploration are countless! Order at least 1 beer of
+                each brewery.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
-      </div>
-
-      <div class="my-6">
-        <div class="block is-size-4">FULL CIRCLE</div>
-        <div class="box">
-          The wages of exploration are countless! Order at least 1 beer of each
-          brewery.
-        </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
     </div>
 
     <div id="socialTab" class="container section content-tab">
       <div class="my-6">
-        <div class="block is-size-4">OBJECTION!</div>
-        <div class="box">
-          Agree to disagree? Rate a beer with at least 1.5 stars of difference
-          in Untappd.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">OBJECTION!</div>
+              <div class="box">
+                Agree to disagree? Rate a beer with at least 1.5 stars of
+                difference in Untappd.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">SMILE FOR THE CAMERA!</div>
-        <div class="box">
-          Cheese! Get someone distracted in a check-in photo.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">SMILE FOR THE CAMERA!</div>
+              <div class="box">
+                Cheese! Get someone distracted in a check-in photo.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">SOCIAL BUTTERFLY</div>
-        <div class="box">
-          The sign that beer wins over language barriers. Make 2 or more new
-          friends in Untappd.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">SOCIAL BUTTERFLY</div>
+              <div class="box">
+                The sign that beer wins over language barriers. Make 2 or more
+                new friends in Untappd.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">ROCKSTAR</div>
-        <div class="box">
-          Such a diva, aren't you? Arrive later than expected to the event
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">ROCKSTAR</div>
+              <div class="box">
+                Such a diva, aren't you? Arrive later than expected to the event
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">POPSTAR</div>
-        <div class="box">
-          Yep, that clicked in my head, somehow. You feel the urge of singing!
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">POPSTAR</div>
+              <div class="box">
+                Yep, that clicked in my head, somehow. You feel the urge of
+                singing!
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">REFUGEES WELCOME</div>
-        <div class="box">
-          Nobody should be lonely! Adopt (or be adopted by) someone who lost
-          their friend group
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">REFUGEES WELCOME</div>
+              <div class="box">
+                Nobody should be lonely! Adopt (or be adopted by) someone who
+                lost their friend group
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
     </div>
 
     <div id="miscTab" class="container section content-tab">
       <div class="my-6">
-        <div class="block is-size-4">READY, SET, FAIL!</div>
-        <div class="box">
-          Oopsie! Forget to make a check-in (this applies only to the last
-          unchecked beer)
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">READY, SET, FAIL!</div>
+              <div class="box">
+                Oopsie! Forget to make a check-in (this applies only to the last
+                unchecked beer)
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">OH NO</div>
-        <div class="box">
-          I wouldn't want to achieve this, but you do you. Throw up during
-          Artbeer Festival.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">OH NO</div>
+              <div class="box">
+                I wouldn't want to achieve this, but you do you. Throw up during
+                Artbeer Festival.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">AS GOOD AS NEW</div>
-        <div class="box">
-          HP/MP restored! You drank enough water and you woke up feeling
-          refreshed.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">AS GOOD AS NEW</div>
+              <div class="box">
+                HP/MP restored! You drank enough water and you woke up feeling
+                refreshed.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
 
       <div class="my-6">
-        <div class="block is-size-4">BOXES</div>
-        <div class="box">
-          After a busy morning drinking, go home to take a nap and then continue
-          drinking in the evening.
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="block is-size-4">BOXES</div>
+              <div class="box">
+                After a busy morning drinking, go home to take a nap and then
+                continue drinking in the evening.
+              </div>
+            </div>
+          </div>
         </div>
-        <button class="block is-warning button">Check-in</button>
+        <button class="block is-warning button is-medium">Check-in</button>
         <progress class="progress" value="25" max="100">75%</progress>
       </div>
     </div>
