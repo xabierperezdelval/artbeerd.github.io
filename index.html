@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Hello Bulma!</title>
     <link rel="stylesheet" href="styles/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
+    />
     <script src="scripts/tabnav.js"></script>
     <script src="scripts/hero.js"></script>
     <script src="scripts/beer-achievements.js"></script>
@@ -12,6 +16,8 @@
     <script src="scripts/misc-achievements.js"></script>
   </head>
   <body>
+    <!-- HERO/HEADER -->
+
     <section class="hero is-warning">
       <div class="hero-body">
         <div class="container has-text-centered">
@@ -19,7 +25,6 @@
           <p id="heroSubtitle" class="subtitle"></p>
         </div>
       </div>
-
       <div class="hero-foot">
         <nav class="tabs is-boxed is-fullwidth is-large">
           <div class="container">
@@ -39,8 +44,10 @@
       </div>
     </section>
 
+    <!-- BEER TAB -->
+
     <div id="beerTab" class="container section content-tab">
-      <div class="my-6">
+      <div id="keepEmComingAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -52,16 +59,43 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">KEEP 'EM COMING!</div>
-              <div class="box">Simply keep on checking beers</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">KEEP 'EM COMING!</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">Simply keep on checking beers.</div>
             </div>
           </div>
         </div>
-        <progress id="beerAchv1Progress" class="progress" value="0" max="5">0%</progress>
-        <button id="beerAchv1Button" onclick="addAchievement1Value(event, this)" class="block is-warning button is-medium">Check-in</button>
+        <progress
+          id="keepEmComingAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="keepEmComingAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="asWideAsTheRainbowAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -73,7 +107,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">AS WIDE AS THE RAINBOW</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">AS WIDE AS THE RAINBOW</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 There's life beyond lagers! Check for every WHITE (witbier),
                 BLACK (porter, stout...), RED (Irish red ale) and BROWN
@@ -82,14 +130,45 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">White</button>
-        <button class="block is-warning button is-medium">Black</button>
-        <button class="block is-warning button is-medium">Red</button>
-        <button class="block is-warning button is-medium">Brown</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="asWideAsTheRainbowAchievProgress"
+          class="progress"
+          value="0"
+          max="4"
+        ></progress>
+        <div class="buttons is-right">
+          <button
+            id="asWideAsTheRainbowAchievButtonWhite"
+            onclick="addMultipleButtonProgressAchievementValue(event, this)"
+            class="is-warning is-medium button"
+          >
+            White
+          </button>
+          <button
+            id="asWideAsTheRainbowAchievButtonBlack"
+            onclick="addMultipleButtonProgressAchievementValue(event, this)"
+            class="is-warning is-medium button"
+          >
+            Black
+          </button>
+          <button
+            id="asWideAsTheRainbowAchievButtonRed"
+            onclick="addMultipleButtonProgressAchievementValue(event, this)"
+            class="is-warning is-medium button"
+          >
+            Red
+          </button>
+          <button
+            id="asWideAsTheRainbowAchievButtonBrown"
+            onclick="addMultipleButtonProgressAchievementValue(event, this)"
+            class="is-warning is-medium button"
+          >
+            Brown
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="secondChancesAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -101,8 +180,22 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">
-                SECOND CHANCES ARE FOR EVERYONE, HUH?
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">
+                      SECOND CHANCES ARE FOR EVERYONE, HUH?
+                    </p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
               </div>
               <div class="box">
                 So you REALLY liked it, didn't you? Check-in for every beer you
@@ -111,11 +204,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="secondChancesAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="secondChancesAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="poleAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -127,7 +233,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">POLE!</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">POLE!</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Came first... to check-in, that is! Be the first checking-in a
                 beer in Untappd.
@@ -135,11 +255,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="poleAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="poleAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="kingForADayAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -151,19 +284,45 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">KING FOR A DAY</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">KING FOR A DAY</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Perfection comes around. Rate the beer with 5 STARS in Untappd.
               </div>
             </div>
           </div>
         </div>
-
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="kingForADayAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="kingForADayAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="knightInShiningAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -175,7 +334,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">KNIGHT IN SHINING PINTGLASS</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">KNIGHT IN SHINING PINTGLASS</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 A case of potential greatness. Rate the beer with 4.5 STARS in
                 Untappd.
@@ -183,11 +356,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="knightInShiningAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="knightInShiningAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="jackOfSomeAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -199,7 +385,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">JACK OF SOME TRADES</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">JACK OF SOME TRADES</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 There's beauty in the flaws. Rate the beer with 4 STARS in
                 Untappd.
@@ -207,11 +407,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="jackOfSomeAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="jackOfSomeAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="pissbierAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -223,19 +436,46 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">PISSBIER</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">PISSBIER</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
-                Son, I am dissapoint. Rate the beer with less than 2 STARS in
+                Son, I am dissapoint. Rate the beer with 2 STARS or less in
                 Untappd.
               </div>
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="pissbierAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="pissbierAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="top5Achiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -247,7 +487,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">TOP 5</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">TOP 5</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Celebrate diversity! Check-in 5 different beers from 5 different
                 breweries/venues.
@@ -255,11 +509,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="top5AchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="top5AchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="burningInYourPocketAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -271,7 +538,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">BURNING IN YOUR POCKET</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">BURNING IN YOUR POCKET</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 It'd better taste like the thighs of a Greek goddess! Spend 10€
                 or more in a single beer.
@@ -279,11 +560,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="burningInYourPocketAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="burningInYourPocketAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="lastOneAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -295,18 +589,45 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">LAST ONE OF THE DAY</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">LAST ONE OF THE DAY</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Bravo, we're going dark. Drink a beer with 15% (or more) ABV.
               </div>
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="lastOneAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="lastOneAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="doubleDateAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -318,18 +639,45 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">DOUBLE DATE</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">DOUBLE DATE</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 ...Double the fun? Order 2 beers for yourself at the same time.
               </div>
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="doubleDateAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="doubleDateAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="fullCircleAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -341,7 +689,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">FULL CIRCLE</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">FULL CIRCLE</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 The wages of exploration are countless! Order at least 1 beer of
                 each brewery.
@@ -349,13 +711,28 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="fullCircleAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="fullCircleAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
     </div>
 
+    <!-- SOCIAL TAB -->
+
     <div id="socialTab" class="container section content-tab">
-      <div class="my-6">
+      <div id="objectionAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -367,7 +744,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">OBJECTION!</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">OBJECTION!</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Agree to disagree? Rate a beer with at least 1.5 stars of
                 difference in Untappd.
@@ -375,11 +766,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="objectionAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="objectionAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="smileForAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -391,18 +795,45 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">SMILE FOR THE CAMERA!</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">SMILE FOR THE CAMERA!</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Cheese! Get someone distracted in a check-in photo.
               </div>
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="smileForAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="smileForAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="socialButterflyAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -414,7 +845,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">SOCIAL BUTTERFLY</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">SOCIAL BUTTERFLY</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 The sign that beer wins over language barriers. Make 2 or more
                 new friends in Untappd.
@@ -422,11 +867,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="socialButterflyAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="socialButterflyAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="rockstarAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -438,18 +896,46 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">ROCKSTAR</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">ROCKSTAR</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
-                Such a diva, aren't you? Arrive later than expected to the event
+                Such a diva, aren't you? Arrive later than expected to the
+                event.
               </div>
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="rockstarAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="rockstarAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="popstarAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -461,7 +947,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">POPSTAR</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">POPSTAR</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Yep, that clicked in my head, somehow. You feel the urge of
                 singing!
@@ -469,11 +969,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="popstarAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="popstarAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="refugeesAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -485,21 +998,46 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">REFUGEES WELCOME</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">REFUGEES WELCOME</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Nobody should be lonely! Adopt (or be adopted by) someone who
-                lost their friend group
+                lost their friend group.
               </div>
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="refugeesAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="refugeesAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
-    </div>
 
-    <div id="miscTab" class="container section content-tab">
-      <div class="my-6">
+      <div id="cheersDearAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -511,7 +1049,76 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">READY, SET, FAIL!</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">CHEERS, DEAR STRANGER!</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <div class="box">
+                Nobody expects the Spanish generosity! Invite someone you just
+                met with a beer.
+              </div>
+            </div>
+          </div>
+        </div>
+        <progress
+          id="cheersDearAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="cheersDearAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MISC TAB -->
+
+    <div id="miscTab" class="container section content-tab">
+      <div id="readySetAchiev" class="my-6">
+        <div class="media media-v-center">
+          <figure class="media-left">
+            <p class="image is-128x128">
+              <img
+                class="is-rounded"
+                src="https://bulma.io/assets/images/placeholders/128x128.png"
+              />
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">READY, SET, FAIL!</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 Oopsie! Forget to make a check-in (this applies only to the last
                 unchecked beer)
@@ -519,11 +1126,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="readySetAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="readySetAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="ohNoAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -535,7 +1155,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">OH NO</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">OH NO</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 I wouldn't want to achieve this, but you do you. Throw up during
                 Artbeer Festival.
@@ -543,11 +1177,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="ohNoAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="ohNoAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="asGoodAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -559,7 +1206,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">AS GOOD AS NEW</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">AS GOOD AS NEW</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 HP/MP restored! You drank enough water and you woke up feeling
                 refreshed.
@@ -567,11 +1228,24 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="asGoodAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="asGoodAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
 
-      <div class="my-6">
+      <div id="boxesAchiev" class="my-6">
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-128x128">
@@ -583,7 +1257,21 @@
           </figure>
           <div class="media-content">
             <div class="content">
-              <div class="block is-size-4">BOXES</div>
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <p class="block is-size-4">BOXES</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item"><span>Not yet achieved!</span></div>
+                  <div class="level-item">
+                    <span class="icon is-medium"
+                      ><i class="fas fa-lg fa-check-circle"></i
+                    ></span>
+                  </div>
+                </div>
+              </div>
               <div class="box">
                 After a busy morning drinking, go home to take a nap and then
                 continue drinking in the evening.
@@ -591,8 +1279,21 @@
             </div>
           </div>
         </div>
-        <button class="block is-warning button is-medium">Check-in</button>
-        <progress class="progress" value="25" max="100">75%</progress>
+        <progress
+          id="boxesAchievProgress"
+          class="progress"
+          value="0"
+          max="5"
+        ></progress>
+        <div class="buttons are-medium is-right">
+          <button
+            id="boxesAchievButton"
+            onclick="addSimpleProgressAchievementValue(event, this)"
+            class="block is-warning button"
+          >
+            Check-in
+          </button>
+        </div>
       </div>
     </div>
   </body>
