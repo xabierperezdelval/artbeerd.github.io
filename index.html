@@ -9,6 +9,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
+    <script defer src="scripts/get-saved-data.js"></script>
     <script src="scripts/tabnav.js"></script>
     <script src="scripts/hero.js"></script>
     <script src="scripts/beer-achievements.js"></script>
@@ -67,13 +68,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="keepEmComingAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="keepEmComingAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -122,13 +128,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="asWideAsTheRainbowAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="asWideAsTheRainbowAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -147,7 +158,10 @@
           value="0"
           max="4"
         ></progress>
-        <div class="buttons is-right">
+        <div
+          id="asWideAsTheRainbowButtonsWrapper"
+          class="buttons-wrapper buttons is-right"
+        >
           <button
             id="asWideAsTheRainbowAchievButtonWhite"
             onclick="addMultipleButtonProgressAchievementValue(event, this)"
@@ -201,13 +215,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="secondChancesAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="secondChancesAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -256,13 +275,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="poleAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="poleAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -311,19 +335,24 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="kingForADayAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="kingForADayAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
               </div>
               <div>
-                <strong>Perfection comes around.</strong> Rate the beer with 5
+                <strong>Perfection comes around.</strong> Rate a beer with 5
                 STARS in Untappd.
               </div>
             </div>
@@ -366,20 +395,25 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="knightInShiningAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="knightInShiningAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
               </div>
               <div>
-                <strong>A case of potential greatness.</strong> Rate the beer
-                with 4.5 STARS in Untappd.
+                <strong>A case of potential greatness.</strong> Rate a beer with
+                4.5 STARS in Untappd.
               </div>
             </div>
           </div>
@@ -421,20 +455,25 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="jackOfSomeAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="jackOfSomeAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
               </div>
               <div>
-                <strong>You found beauty in the flaws.</strong> Rate the beer
-                with 4 STARS in Untappd.
+                <strong>You found beauty in the flaws.</strong> Rate a beer with
+                4 STARS in Untappd.
               </div>
             </div>
           </div>
@@ -476,20 +515,25 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="pissbierAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="pissbierAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
               </div>
               <div>
-                <strong>Son, I am dissapoint.</strong> Rate the beer with 2
-                STARS or less in Untappd.
+                <strong>Son, I am dissapoint.</strong> Rate a beer with 2 STARS
+                or less in Untappd.
               </div>
             </div>
           </div>
@@ -531,13 +575,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="top5AchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="top5AchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -589,13 +638,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="burningInYourPocketAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="burningInYourPocketAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -646,13 +700,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="lastOneAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="lastOneAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -701,13 +760,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="doubleDateAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="doubleDateAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -756,13 +820,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="fullCircleAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="fullCircleAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -815,13 +884,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="objectionAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="objectionAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -870,13 +944,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="smileForAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="smileForAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -925,13 +1004,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="socialButterflyAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="socialButterflyAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -980,13 +1064,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="rockstarAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="rockstarAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1035,13 +1124,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="popstarAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="popstarAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1090,13 +1184,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="refugeesAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="refugeesAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1145,13 +1244,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="cheersDearAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="cheersDearAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1204,13 +1308,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="readySetAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="readySetAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1259,13 +1368,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="ohNoAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="ohNoAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1316,13 +1430,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="asGoodAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="asGoodAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1371,13 +1490,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="boxesAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="boxesAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
@@ -1427,20 +1551,25 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="duasCervejasAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="duasCervejasAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>
               </div>
               <div>
                 <strong>Está se sentindo corajoso?</strong> Make your order in
-                portuguese.
+                Portuguese.
               </div>
             </div>
           </div>
@@ -1482,13 +1611,18 @@
                 </div>
                 <div class="level-right">
                   <div class="level-item">
-                    <span class="achievement-level-title is-disabled"
+                    <span
+                      id="rollCreditsAchievLevel"
+                      class="achievement-level-title is-disabled"
                       >Not yet achieved!</span
                     >
                   </div>
                   <div class="level-item">
                     <span class="icon is-medium"
-                      ><i class="is-disabled fas fa-lg fa-check-circle"></i
+                      ><i
+                        id="rollCreditsAchievIcon"
+                        class="icon-element is-disabled fas fa-lg fa-check-circle"
+                      ></i
                     ></span>
                   </div>
                 </div>

@@ -25,5 +25,4 @@ function displayRandomMessage() {
   messageElement.innerHTML = randomMessage;
 }
 
-// Call the function when the page loads
 window.onload = displayRandomMessage;
