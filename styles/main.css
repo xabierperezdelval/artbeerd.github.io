@@ -1,9 +1,18 @@
 @import "../node_modules/bulma/css/bulma.css";
 
-#socialTab, #miscTab {
+#socialTab,
+#miscTab {
   display: none;
 }
 
 .media-v-center {
-    align-items: center;
+  align-items: center;
+}
+
+.is-disabled {
+  opacity: 0.5;
+}
+
+.achievement-level-title:not(.is-disabled) {
+  font-weight: bold;
 }
