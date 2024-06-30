@@ -17,6 +17,11 @@
   font-weight: bold;
 }
 
+.sup-index {
+  vertical-align: super;
+  font-size: 0.3em;
+}
+
 @media only screen and (max-width: 340px) {
 
   body { 

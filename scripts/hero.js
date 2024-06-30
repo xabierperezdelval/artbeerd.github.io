@@ -7,13 +7,13 @@ function displayRandomMessage() {
     "Rating wisely after the fifth beer, now THAT'S being a hero!",
     "More bitter than your ex's heart.",
     "Hangovers gamified.",
-    "The darker your beer, the harder you fall.",
+    "The darker the beer, the harder you fall.",
     "Did you know? A single pastry stout pint counts as a full daily calorie intake!",
     "Pretend you know about beer, it's actually fun!",
     "Sticks and stones may break my bones, but barleywines also hurt me.",
     "I got 99 problems but a DIPA ain't one.",
     "Day 42: The barleywine isn't RAISIN any suspicion.",
-    "Spinosaurus Aegyptiacus wouldn't want this warm piss for me to take.",
+    "Spinosaurus Aegyptiacus wouldn't want this warm piss of beer for me.",
     "One NEIPA aaaaand you've tasted 'em all.",
     "You really should be drinking something right now, y'know."
   ];
