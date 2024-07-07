@@ -31,10 +31,4 @@ window.addEventListener("load", function () {
         icon.classList.remove("is-disabled");
       }
   }));
-
-/*   icons.achievementContainers.forEach((achiev) => {
-    if (this.localStorage.getItem(achiev.id)) {
-      achiev.querySelector();
-    }
-  }); */
 });

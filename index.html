@@ -10,17 +10,25 @@
       href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"
     />
     <script defer src="scripts/get-saved-data.js"></script>
+    <script src="scripts/delete-saved-data.js"></script>
+    <script src="scripts/modals.js"></script>
     <script src="scripts/tabnav.js"></script>
     <script src="scripts/hero.js"></script>
     <script src="scripts/beer-achievements.js"></script>
-    <script src="scripts/social-achievements.js"></script>
-    <script src="scripts/misc-achievements.js"></script>
   </head>
   <body>
     <!-- HERO/HEADER -->
 
     <section class="hero is-warning">
       <div class="hero-body">
+        <div class="container has-text-right">
+          <div class="buttons are-small is-right">
+            <button class="js-modal-trigger button is-dark" data-target="modal-js-example">
+              <!-- onclick="deleteLocalStorage()" -->
+              Reset progress
+            </button>
+          </div>
+        </div>
         <div class="container has-text-centered">
           <h1 class="title">Artbeerd <span class="sup-index">BETA</span></h1>
           <p id="heroSubtitle" class="subtitle"></p>
@@ -114,7 +122,7 @@
             <p class="image is-64x64">
               <img
                 class="is-rounded"
-                src="https://bulma.io/assets/images/placeholders/128x128.png"
+                src="./media/as-wide-as-the-rainbow-128.png"
               />
             </p>
           </figure>
@@ -197,10 +205,7 @@
         <div class="media media-v-center">
           <figure class="media-left">
             <p class="image is-64x64">
-              <img
-                class="is-rounded"
-                src="https://bulma.io/assets/images/placeholders/128x128.png"
-              />
+              <img class="is-rounded" src="./media/second-chances-128.png" />
             </p>
           </figure>
           <div class="media-content">
@@ -302,7 +307,7 @@
           id="poleAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -362,7 +367,7 @@
           id="kingForADayAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="3"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -422,7 +427,7 @@
           id="knightInShiningAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="3"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -482,7 +487,7 @@
           id="jackOfSomeAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="3"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -542,7 +547,7 @@
           id="pissbierAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="3"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -667,7 +672,7 @@
           id="burningInYourPocketAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -727,7 +732,7 @@
           id="lastOneAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -787,7 +792,7 @@
           id="doubleDateAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -847,7 +852,7 @@
           id="fullCircleAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -911,7 +916,7 @@
           id="objectionAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="3"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -971,7 +976,7 @@
           id="smileForAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1031,7 +1036,7 @@
           id="socialButterflyAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="2"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1081,8 +1086,8 @@
                 </div>
               </div>
               <div>
-                <strong>Such a diva, aren't you?</strong> Arrive later than
-                expected to the event.
+                <strong>You're such a diva, aren't you?</strong> Arrive later
+                than expected to the event.
               </div>
             </div>
           </div>
@@ -1091,7 +1096,7 @@
           id="rockstarAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1151,7 +1156,7 @@
           id="popstarAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1211,7 +1216,7 @@
           id="refugeesAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1271,7 +1276,7 @@
           id="cheersDearAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1335,7 +1340,7 @@
           id="readySetAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1397,7 +1402,7 @@
           id="ohNoAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1457,7 +1462,7 @@
           id="asGoodAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1518,7 +1523,7 @@
           id="boxesAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1578,7 +1583,7 @@
           id="duasCervejasAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="3"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1629,7 +1634,7 @@
               </div>
               <div>
                 <strong>You made it to the end!</strong> Get to the closing hour
-                of at least one day (4 AM).
+                of a day (4 AM).
               </div>
             </div>
           </div>
@@ -1638,7 +1643,7 @@
           id="rollCreditsAchievProgress"
           class="progress"
           value="0"
-          max="5"
+          max="1"
         ></progress>
         <div class="buttons are-medium is-right">
           <button
@@ -1650,6 +1655,19 @@
           </button>
         </div>
       </div>
+    </div>
+
+    <div id="modal-js-example" class="modal">
+      <div class="modal-background"></div>
+    
+      <div class="modal-content">
+        <div class="box">
+          <p>Modal JS example</p>
+          <!-- Your content -->
+        </div>
+      </div>
+    
+      <button class="modal-close is-large" aria-label="close"></button>
     </div>
   </body>
 </html>
